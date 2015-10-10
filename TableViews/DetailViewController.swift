@@ -12,14 +12,15 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
+// didSet is called immediately after a property is stored, this helps for updated data
+    // so every
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
             self.configureView()
         }
     }
-
+// this checks to see if an object is present
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
